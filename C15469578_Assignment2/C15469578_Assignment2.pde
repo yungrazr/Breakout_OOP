@@ -1,5 +1,11 @@
+//OOP ASSIGNMENT 2
+//C15469578 DANIEL VEGERA
+//////////////////////////
 
 Player player;
+MainMenu menu;
+PFont title;
+boolean play=false;
 
 
 
@@ -11,7 +17,10 @@ void setup()
   frameRate(60);
   rectMode(CENTER);
   ellipseMode(CENTER);
+  textAlign(CENTER,CENTER);
   player = new Player();
+  menu = new MainMenu();
+  title = loadFont("Italic-Bricks-120.vlw");
   
 }//end Setup
 
@@ -39,8 +48,12 @@ boolean checkKey(int k)
 void draw()
 {
   background(0);
-  player.updatePlayer();
-  player.drawPlayer();
+  menu.drawMenu();
+  if(play)
+  {
+    player.updatePlayer();
+    player.drawPlayer();
+  }
   
   
 }
