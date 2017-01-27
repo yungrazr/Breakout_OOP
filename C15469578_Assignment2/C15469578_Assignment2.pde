@@ -1,11 +1,19 @@
+
+Player player;
+
+
+
+///////////////////////////////
+
 void setup()
 {
-  size(1280,720);
+  fullScreen();
   frameRate(60);
-  rectMode(CORNER);
+  rectMode(CENTER);
   ellipseMode(CENTER);
+  player = new Player();
   
-}
+}//end Setup
 
 boolean[] keys = new boolean[1000];
 
@@ -31,8 +39,8 @@ boolean checkKey(int k)
 void draw()
 {
   background(0);
-  Player.update();
-  drawPlayer(height
+  player.updatePlayer();
+  player.drawPlayer();
   
   
 }

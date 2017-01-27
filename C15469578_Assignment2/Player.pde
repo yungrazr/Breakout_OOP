@@ -1,34 +1,23 @@
 class Player
 {
-  float x,y;
-  float playerW;
-  float playerH;
-  float playerSpeed;
-  float curve;
-  color c;
+  float x=width/2;
+  float y=height-100;
+  float playerW=200;
+  float playerH=25;
+  float playerSpeed=10;
+  float curve=7;
+  color c=color(250,28,28);
   
-  Player(float x, float y, float playerW,
-  float playerH, float curve, color c)
+  void drawPlayer()
   {
-    this.x=x;
-    this.y=y;
-    this.playerW=playerW;
-    this.playerH=playerH;
-    this.curve=curve;
-    this.c=c;
+    fill(c);
+    rect(x,y,playerW,playerH,curve);
+    
   }
   
-}
+  void updatePlayer()
+  {
+    x=mouseX;
+  }
 
-void drawPlayer(float x, float y, float playerW,
-float playerH, float curve, color c)
-{
-  fill(c);
-  rect(x,y,x+playerW,y+playerH,curve);
-  
-}
-
-void updatePlayer()
-{
-  Player.update();
 }
