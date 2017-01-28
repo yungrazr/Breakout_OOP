@@ -68,6 +68,7 @@ void draw()
     player.drawPlayer();
     ball.updateBall();
     ball.drawBall();
+    ball.drawDisplay();
   }
   
   if(control) {
