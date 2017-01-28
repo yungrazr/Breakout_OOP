@@ -6,8 +6,9 @@ class Ball
   float y2=0;
   float speed;
   float radius=25;
-  int lives=3;
-  float powerup;
+  int lives=1;
+  int powerup=0;
+  int score=0;
   
   
   void drawBall()
@@ -19,6 +20,7 @@ class Ball
   
   void updateBall()
   {
+    
     //checks to see if ball
     //is hitting off the walls
     if(x-radius/2<0)
@@ -38,6 +40,12 @@ class Ball
     {
       release=false;
       lives-=1;
+      if(lives<=0)
+      {
+        play=false;
+        gameover=true;
+      }
+    
     }
     
     //check to see if ball hit paddle

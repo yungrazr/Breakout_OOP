@@ -3,7 +3,7 @@ class Controls
   float bWidth=300;
   float bHeight=100;
   float bWPos=width/2;
-  float bHPos3=(height/2+300);
+  float bHPos=(height/2+300);
   
   
   void drawControls()
@@ -15,13 +15,12 @@ class Controls
      text("Hit the bricks with the ball to complete the level",width/2,height/3+100);
      text("Collect powerups for different abilities/bonuses",width/2,height/3+200);
      
-     drawButton(bWPos,bHPos3,bWidth,bHeight,2,"BACK",255);
+     drawButton(bWPos,bHPos,bWidth,bHeight,2,"BACK",255);
      if(mousePressed)
      {
-        if(mouseX>bWPos-bWidth/2 && mouseX<bWPos+bWidth/2 && mouseY>bHPos3-bHeight/2 && mouseY<bHPos3+bHeight/2)
+        if(mouseX>bWPos-bWidth/2 && mouseX<bWPos+bWidth/2 && mouseY>bHPos-bHeight/2 && mouseY<bHPos+bHeight/2)
         {
           control=false;
-          delay(500);
           main=true;
           //brings you back to main menu
         }

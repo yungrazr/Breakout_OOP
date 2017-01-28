@@ -6,12 +6,14 @@ Player player;
 MainMenu menu;
 Controls controls;
 Ball ball;
+GameOver game;
 PFont title;
 PFont content;
 boolean main=true;
 boolean control=false;
 boolean play=false;
 boolean release=false;
+boolean gameover=false;
 
 
 
@@ -28,6 +30,7 @@ void setup()
   menu = new MainMenu();
   controls = new Controls();
   ball = new Ball();
+  game = new GameOver();
   title = loadFont("Italic-Bricks-120.vlw");
   content = loadFont("Arial-BoldItalicMT-60.vlw");
   
@@ -60,6 +63,12 @@ void draw()
   if(main) {
     cursor();
     menu.drawMenu();
+  }
+  
+  if(gameover)
+  {
+    cursor();
+    game.drawGameOver();
   }
   
   if(play) {
