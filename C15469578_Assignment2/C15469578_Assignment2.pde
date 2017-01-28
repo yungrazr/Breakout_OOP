@@ -56,8 +56,8 @@ boolean checkKey(int k)
 void draw()
 {
   background(0);
-  cursor();
   if(main) {
+    cursor();
     menu.drawMenu();
   }
   
@@ -68,6 +68,7 @@ void draw()
   }
   
   if(control) {
+    cursor();
     controls.drawControls();
   }
   
