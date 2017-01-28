@@ -48,33 +48,42 @@ class MainMenu
      
      //method calls for drawing buttons
      drawButton(bWPos,bHPos,bWidth,bHeight,2,"PLAY!",255);
-     if(mousePressed)
+     if(mouseX>bWPos-bWidth/2 && mouseX<bWPos+bWidth/2 && mouseY>bHPos-bHeight/2 && mouseY<bHPos+bHeight/2)
      {
-        if(mouseX>bWPos-bWidth/2 && mouseX<bWPos+bWidth/2 && mouseY>bHPos-bHeight/2 && mouseY<bHPos+bHeight/2)
-        {
+       textFont(content,30);
+       fill(255);
+       text("Jump right into the game!",width/2,(height/2+200));
+       if(mousePressed)
+       {
           main=false;
           play=true;
           //move onto game
         }
      }
      drawButton(bWPos2,bHPos,bWidth,bHeight,2,"CONTROLS",255);
-     if(mousePressed)
+     if(mouseX>bWPos2-bWidth/2 && mouseX<bWPos2+bWidth/2 && mouseY>bHPos-bHeight/2 && mouseY<bHPos+bHeight/2)
      {
-        if(mouseX>bWPos2-bWidth/2 && mouseX<bWPos2+bWidth/2 && mouseY>bHPos-bHeight/2 && mouseY<bHPos+bHeight/2)
-        {
+       textFont(content,30);
+       fill(255);
+       text("Tips on how to play!",width/2,(height/2+200));
+       if(mousePressed)
+       {
           main=false;
           control=true;
           //move to controls page
-        }
+       }
      }
      drawButton(bWPos3,bHPos,bWidth,bHeight,2,"QUIT",255);
-     if(mousePressed)
+     if(mouseX>bWPos3-bWidth/2 && mouseX<bWPos3+bWidth/2 && mouseY>bHPos-bHeight/2 && mouseY<bHPos+bHeight/2)
      {
-        if(mouseX>bWPos3-bWidth/2 && mouseX<bWPos3+bWidth/2 && mouseY>bHPos-bHeight/2 && mouseY<bHPos+bHeight/2)
-        {
+       textFont(content,30);
+       fill(255);
+       text("Do you really want to quit? :(",width/2,(height/2+200));
+       if(mousePressed)
+       {
           exit();
           //exit the game
-        }
+       }
      }
   }
   
