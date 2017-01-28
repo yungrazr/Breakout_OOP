@@ -5,6 +5,7 @@
 Player player;
 MainMenu menu;
 PFont title;
+PFont content;
 boolean play=false;
 
 
@@ -21,6 +22,7 @@ void setup()
   player = new Player();
   menu = new MainMenu();
   title = loadFont("Italic-Bricks-120.vlw");
+  content = loadFont("Arial-BoldItalicMT-60.vlw");
   
 }//end Setup
 
@@ -48,9 +50,11 @@ boolean checkKey(int k)
 void draw()
 {
   background(0);
-  menu.drawMenu();
-  if(play)
-  {
+  if(play==false) {
+    menu.drawMenu();
+  }
+  else {
+    noCursor();
     player.updatePlayer();
     player.drawPlayer();
   }

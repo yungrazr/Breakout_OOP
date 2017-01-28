@@ -11,6 +11,7 @@ class Player
   void drawPlayer()
   {
     fill(c);
+    noStroke();
     rect(x,y,playerW,playerH,curve);
     
   }
