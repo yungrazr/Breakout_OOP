@@ -11,6 +11,7 @@ PFont content;
 boolean main=true;
 boolean control=false;
 boolean play=false;
+boolean release=false;
 
 
 
@@ -65,6 +66,8 @@ void draw()
     noCursor();
     player.updatePlayer();
     player.drawPlayer();
+    ball.updateBall();
+    ball.drawBall();
   }
   
   if(control) {
