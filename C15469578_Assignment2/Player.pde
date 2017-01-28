@@ -21,4 +21,4 @@ class Player
     x=mouseX;
   }
 
-}
+}//end class Player

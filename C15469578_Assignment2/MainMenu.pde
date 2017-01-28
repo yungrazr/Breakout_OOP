@@ -24,6 +24,7 @@ class MainMenu
      {
         if(mouseX>bWPos-bWidth/2 && mouseX<bWPos+bWidth/2 && mouseY>bHPos1-bHeight/2 && mouseY<bHPos1+bHeight/2)
         {
+          main=false;
           play=true;
           //move onto game
         }
@@ -33,7 +34,8 @@ class MainMenu
      {
         if(mouseX>bWPos-bWidth/2 && mouseX<bWPos+bWidth/2 && mouseY>bHPos2-bHeight/2 && mouseY<bHPos2+bHeight/2)
         {
-          //controls=true;
+          main=false;
+          control=true;
           //move to controls page
         }
      }
@@ -43,16 +45,9 @@ class MainMenu
         if(mouseX>bWPos-bWidth/2 && mouseX<bWPos+bWidth/2 && mouseY>bHPos3-bHeight/2 && mouseY<bHPos3+bHeight/2)
         {
           exit();
-          //controls=true;
-          //move to controls page
+          //exit the game
         }
      }
   }
   
-  
-  
-  
-  
-  
-  
-}
+}//end class MainMenu

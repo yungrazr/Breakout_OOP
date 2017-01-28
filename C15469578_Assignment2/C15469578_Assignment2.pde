@@ -4,8 +4,12 @@
 
 Player player;
 MainMenu menu;
+Controls controls;
+Ball ball;
 PFont title;
 PFont content;
+boolean main=true;
+boolean control=false;
 boolean play=false;
 
 
@@ -21,6 +25,8 @@ void setup()
   textAlign(CENTER,CENTER);
   player = new Player();
   menu = new MainMenu();
+  controls = new Controls();
+  ball = new Ball();
   title = loadFont("Italic-Bricks-120.vlw");
   content = loadFont("Arial-BoldItalicMT-60.vlw");
   
@@ -50,13 +56,19 @@ boolean checkKey(int k)
 void draw()
 {
   background(0);
-  if(play==false) {
+  cursor();
+  if(main) {
     menu.drawMenu();
   }
-  else {
+  
+  if(play) {
     noCursor();
     player.updatePlayer();
     player.drawPlayer();
+  }
+  
+  if(control) {
+    controls.drawControls();
   }
   
   
