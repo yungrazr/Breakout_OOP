@@ -1,14 +1,14 @@
 class Ball
 {
-  float x=mouseX;
-  float y=height-120;
-  float x2=0;
-  float y2=0;
+  float x = mouseX;
+  float y = height-120;
+  float x2 = 0;
+  float y2 = 0;
   float speed;
-  float radius=25;
-  int lives=1;
-  int powerup=0;
-  int score=0;
+  float radius = 25;
+  int lives = 1;
+  int powerup = 0;
+  int score = 0;
   
   
   void drawBall()
@@ -83,7 +83,7 @@ class Ball
     {
        textFont(content,60);
        fill(50);
-       text("Lives:" + lives,width/2,height/4);
+       text("Lives: " + lives,width/2,height/4);
     }
   
 }//end class Ball

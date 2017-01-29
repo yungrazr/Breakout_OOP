@@ -11,7 +11,7 @@ class GameOver
       fill(255);
       text("Game over!",width/2,height/4);
       textFont(content,60);
-      text("Your final score:" + ball.score,width/2,height/2);
+      text("Your final score: " + ball.score,width/2,height/2);
       
       
      drawButton(bWPos,bHPos,bWidth,bHeight,2,"MENU",255);
