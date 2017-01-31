@@ -24,13 +24,14 @@ class Brick
   {
     if(brickLife>0)
     {
-      if(ball.x+(ball.radius/2) > x && ball.x-(ball.radius/2) < x+brickWidth)
+      if(ball.position.x+(ball.radius/2) > x && ball.position.x-(ball.radius/2) < x+brickWidth)
       {
-        if(ball.y+(ball.radius/2) > y && ball.y-(ball.radius/2) < y+brickHeight)
+        if(ball.position.y+(ball.radius/2) > y && ball.position.y-(ball.radius/2) < y+brickHeight)
         {
+
+          ball.velocity.y*=-1;
           brickLife=-1;
           //reverse y direction of ball when hitting brick
-          ball.y2*=-1;
         }
       }
     }

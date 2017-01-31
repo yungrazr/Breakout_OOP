@@ -16,6 +16,7 @@ boolean control=false;
 boolean play=false;
 boolean release=false;
 boolean gameover=false;
+int cooldown=20;
 
 ///////////////////////////////
 
@@ -53,6 +54,7 @@ void draw()
   }
   
   if(play) {
+    cooldown--;
     noCursor();
     player.updatePlayer();
     player.drawPlayer();

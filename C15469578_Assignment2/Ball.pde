@@ -1,12 +1,10 @@
 class Ball
 {
-  float x = mouseX;
-  float y = height-120;
-  float x2 = 0;
-  float y2 = 0;
+  PVector position = new PVector(mouseX, height - 120);
+  PVector velocity = new PVector(0, 0);
   float speed;
   float radius = 25;
-  int lives = 1;
+  int lives = 3;
   int powerup = 0;
   int score = 0;
   
@@ -14,8 +12,8 @@ class Ball
   void drawBall()
   {
     fill(150);
-    ellipse(x,y,radius,radius);
-    
+    //ellipse(x,y,radius,radius);
+    ellipse(position.x, position.y, radius, radius);
   }
   
   void updateBall()
@@ -23,21 +21,21 @@ class Ball
     
     //checks to see if ball
     //is hitting off the walls
-    if(x-radius/2<0)
+    if(position.x-radius/2<0)
     {
-      x2=random(1, 5);
+      velocity.x=random(1, 5);
     }
-    if(x+radius/2>width)
+    if(position.x+radius/2>width)
     {
-      x2=random(-5, -1);
+      velocity.x=random(-5, -1);
     }
-    if(y-radius/2<0)
+    if(position.y-radius/2<0)
     {
-      y2*=-1;
+      velocity.y*=-1;
     }
     
     //check to see if ball fell under
-    if(y+radius/2>height)
+    if(position.y+radius/2>height)
     {
       release=false;
       lives-=1;
@@ -50,32 +48,32 @@ class Ball
     }
     
     //check to see if ball hit paddle
-    if(x+(radius/2) > player.x-(player.playerW/2) && x-(radius/2) < player.x+(player.playerW/2))
+    if(position.x+(radius/2) > player.position.x-(player.playerW/2) && position.x-(radius/2) < player.position.x+(player.playerW/2))
     {
-      if(y+radius/2>player.y)
+      if(position.y+radius/2>player.position.y)
       {
-        y2*=-1;
+        velocity.y*=-1;
       }
     }
     
-    if(release==false)
+    if(!release)
     {
-      x=mouseX;
-      y=height-120;
+      position.x=mouseX;
+      position.y=height-120;
     }
     else
     {
-      x += x2;
-      y += y2;
+      position.x += velocity.x;
+      position.y += velocity.y;
     }
     
-    if (mousePressed == true) 
+    if(mousePressed && cooldown < 0) 
     {
-      if(release==false)
+      if(!release)
       {
         release=true;
-        y2 = -5;
-        x2 = random(-10, 10);
+        velocity.y = -5;
+        velocity.x = random(-10, 10);
       }
     }
   }//end updateBall
