@@ -21,14 +21,6 @@ class GameUI
      b.drawBrick();
     }
     
-    
-    
-    
-    
   }
-
-  
-  
-  
-  
+ 
 }
