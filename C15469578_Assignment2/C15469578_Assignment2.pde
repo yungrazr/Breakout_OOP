@@ -1,4 +1,5 @@
 //OOP ASSIGNMENT 2
+//BREAKOUT GAME
 //C15469578 DANIEL VEGERA
 //////////////////////////
 
@@ -7,6 +8,7 @@ MainMenu menu;
 Controls controls;
 Ball ball;
 GameOver game;
+Brick brick;
 PFont title;
 PFont content;
 boolean main=true;
@@ -24,11 +26,13 @@ void setup()
   rectMode(CENTER);
   ellipseMode(CENTER);
   textAlign(CENTER,CENTER);
+  
   player = new Player();
   menu = new MainMenu();
   controls = new Controls();
   ball = new Ball();
   game = new GameOver();
+  brick = new Brick();
   title = loadFont("Italic-Bricks-120.vlw");
   content = loadFont("Arial-BoldItalicMT-60.vlw");
   
@@ -55,6 +59,8 @@ void draw()
     ball.updateBall();
     ball.drawBall();
     ball.drawDisplay();
+    brick.drawBrick();
+    brick.updateBrick();
   }
   
   if(control) {

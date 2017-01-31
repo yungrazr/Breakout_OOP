@@ -35,6 +35,7 @@ class Ball
     {
       y2*=-1;
     }
+    
     //check to see if ball fell under
     if(y+radius/2>height)
     {
