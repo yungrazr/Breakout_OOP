@@ -3,11 +3,14 @@
 //C15469578 DANIEL VEGERA
 //////////////////////////
 
+import java.util.*;
+
 Player player;
 MainMenu menu;
 Controls controls;
 Ball ball;
 GameOver game;
+GameUI gameui;
 Brick brick;
 PFont title;
 PFont content;
@@ -17,6 +20,7 @@ boolean play=false;
 boolean release=false;
 boolean gameover=false;
 int cooldown=20;
+List<Brick> bricks = new ArrayList<Brick>();
 
 ///////////////////////////////
 
@@ -30,14 +34,22 @@ void setup()
   
   player = new Player();
   menu = new MainMenu();
+  gameui = new GameUI();
   controls = new Controls();
   ball = new Ball();
   game = new GameOver();
-  brick = new Brick();
+  //bricks.add(new Brick(new PVector(width/2, height/2)));
+  for (int x = 0; x < 10; x++) 
+  {
+    for (int y = 0; y < 10; y++) 
+    {
+      bricks.add(new Brick(new PVector(width / 10 * x, height / 10 * y)));
+    }
+  }
   title = loadFont("Italic-Bricks-120.vlw");
   content = loadFont("Arial-BoldItalicMT-60.vlw");
   
-}//end Setup
+}
 
 void draw()
 {
@@ -56,13 +68,7 @@ void draw()
   if(play) {
     cooldown--;
     noCursor();
-    player.updatePlayer();
-    player.drawPlayer();
-    ball.updateBall();
-    ball.drawBall();
-    ball.drawDisplay();
-    brick.drawBrick();
-    brick.updateBrick();
+    gameui.drawUI();
   }
   
   if(control) {
@@ -71,4 +77,4 @@ void draw()
   }
   
   
-}//end Draw
+}

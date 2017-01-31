@@ -4,10 +4,6 @@ class Ball
   PVector velocity = new PVector(0, 0);
   float speed;
   float radius = 25;
-  int lives = 3;
-  int powerup = 0;
-  int score = 0;
-  
   
   void drawBall()
   {
@@ -38,8 +34,8 @@ class Ball
     if(position.y+radius/2>height)
     {
       release=false;
-      lives-=1;
-      if(lives<=0)
+      gameui.lives-=1;
+      if(gameui.lives<=0)
       {
         play=false;
         gameover=true;
@@ -76,13 +72,6 @@ class Ball
         velocity.x = random(-10, 10);
       }
     }
-  }//end updateBall
-    
-    void drawDisplay()
-    {
-       textFont(content,60);
-       fill(50);
-       text("Lives: " + lives,width/2,height/4);
-    }
+  }
   
-}//end class Ball
+}
