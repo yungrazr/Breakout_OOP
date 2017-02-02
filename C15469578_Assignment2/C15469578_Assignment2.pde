@@ -21,6 +21,7 @@ boolean release=false;
 boolean gameover=false;
 int cooldown=20;
 List<Brick> bricks = new ArrayList<Brick>();
+boolean planeArray[][] = new boolean[16][10];
 
 ///////////////////////////////
 
@@ -31,6 +32,12 @@ void setup()
   rectMode(CENTER);
   ellipseMode(CENTER);
   textAlign(CENTER,CENTER);
+  planeArray[7][5]=true;
+  planeArray[8][5]=true;
+  planeArray[8][6]=true;
+  planeArray[8][7]=true;
+  planeArray[9][7]=true;
+  
   
   player = new Player();
   menu = new MainMenu();
@@ -43,7 +50,10 @@ void setup()
   {
     for (int y = 0; y < 10; y++) 
     {
-      bricks.add(new Brick(new PVector(width / 10 * x, height / 10 * y)));
+      if(planeArray[y][x])
+      {
+        bricks.add(new Brick(new PVector(width / 16 * x, (height/2) / 10 * y)));
+      }
     }
   }
   title = loadFont("Italic-Bricks-120.vlw");
