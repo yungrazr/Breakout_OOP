@@ -57,6 +57,7 @@ class MainMenu
        {
           main=false;
           play=true;
+          gameui.lives=3;
           //move onto game
         }
      }

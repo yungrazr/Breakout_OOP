@@ -6,11 +6,6 @@ class GameUI
   
   void drawUI()
   {
-    textFont(content,30);
-    fill(255);
-    text("Lives: " + lives,100,30);
-    text("Score: " + score,250,30);
-    
     player.updatePlayer();
     player.drawPlayer();
     ball.updateBall();
@@ -20,7 +15,11 @@ class GameUI
      b.updateBrick();
      b.drawBrick();
     }
-    
+    textFont(content,30);
+    fill(255);
+    text("Lives: " + lives,100,30);
+    text("Score: " + score,250,30);
+ 
   }
  
 }

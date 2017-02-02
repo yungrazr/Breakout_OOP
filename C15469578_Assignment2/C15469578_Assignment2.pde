@@ -4,6 +4,12 @@
 //////////////////////////
 
 import java.util.*;
+import ddf.minim.*;
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+import ddf.minim.signals.*;
+import ddf.minim.spi.*;
+import ddf.minim.ugens.*;
 
 Player player;
 MainMenu menu;
@@ -12,6 +18,7 @@ Ball ball;
 GameOver game;
 GameUI gameui;
 Brick brick;
+FileRead fileread;
 PFont title;
 PFont content;
 boolean main=true;
@@ -21,6 +28,7 @@ boolean release=false;
 boolean gameover=false;
 int cooldown=20;
 List<Brick> bricks = new ArrayList<Brick>();
+List<boolean[][]> levels = new ArrayList<boolean[][]>();
 boolean planeArray[][] = new boolean[16][10];
 
 ///////////////////////////////
@@ -38,13 +46,13 @@ void setup()
   planeArray[8][7]=true;
   planeArray[9][7]=true;
   
-  
   player = new Player();
   menu = new MainMenu();
   gameui = new GameUI();
   controls = new Controls();
   ball = new Ball();
   game = new GameOver();
+  fileread = new FileRead();
   //bricks.add(new Brick(new PVector(width/2, height/2)));
   for (int x = 0; x < 10; x++) 
   {
@@ -67,6 +75,7 @@ void draw()
   if(main) {
     cursor();
     menu.drawMenu();
+    fileread.readFile("lvl1.txt");
   }
   
   if(gameover)
