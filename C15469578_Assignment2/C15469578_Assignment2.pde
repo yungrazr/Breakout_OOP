@@ -29,7 +29,7 @@ boolean gameover=false;
 int cooldown=20;
 List<Brick> bricks = new ArrayList<Brick>();
 List<boolean[][]> levels = new ArrayList<boolean[][]>();
-boolean planeArray[][] = new boolean[16][10];
+boolean planeArray[][] = new boolean[16][12];
 
 ///////////////////////////////
 
@@ -40,12 +40,6 @@ void setup()
   rectMode(CENTER);
   ellipseMode(CENTER);
   textAlign(CENTER,CENTER);
-  planeArray[7][5]=true;
-  planeArray[8][5]=true;
-  planeArray[8][6]=true;
-  planeArray[8][7]=true;
-  planeArray[9][7]=true;
-  
   player = new Player();
   menu = new MainMenu();
   gameui = new GameUI();
@@ -53,14 +47,15 @@ void setup()
   ball = new Ball();
   game = new GameOver();
   fileread = new FileRead();
+  fileread.readFile("lvl1.txt");
   //bricks.add(new Brick(new PVector(width/2, height/2)));
-  for (int x = 0; x < 10; x++) 
+  for (int x = 0; x < 16; x++) 
   {
-    for (int y = 0; y < 10; y++) 
+    for (int y = 0; y < 12; y++) 
     {
-      if(planeArray[y][x])
+      if(planeArray[x][y])
       {
-        bricks.add(new Brick(new PVector(width / 16 * x, (height/2) / 10 * y)));
+        bricks.add(new Brick(new PVector(width / 16 * x, (height/2+200) / 12 * y)));
       }
     }
   }
@@ -75,7 +70,6 @@ void draw()
   if(main) {
     cursor();
     menu.drawMenu();
-    fileread.readFile("lvl1.txt");
   }
   
   if(gameover)

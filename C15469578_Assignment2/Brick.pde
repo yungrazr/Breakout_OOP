@@ -1,7 +1,7 @@
 class Brick
 {
   PVector position = new PVector(0, 0);
-  float brickHeight = 40;
+  float brickHeight = 50;
   float brickWidth = 110;
   int brickLife = 1;
   color [] brickColor = { color(234,24,24), color(94,28,234),
