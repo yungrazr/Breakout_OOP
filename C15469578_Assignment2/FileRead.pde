@@ -21,6 +21,16 @@ class FileRead
       }
     }
     planeArray=level;
+    for (int x = 0; x < 16; x++) 
+    {
+      for (int y = 0; y < 12; y++) 
+      {
+        if(planeArray[x][y])
+        {
+          bricks.add(new Brick(new PVector(width / 16 * x, (height/2+200) / 12 * y)));
+        }
+      }
+    }
   }
   
   

@@ -56,8 +56,7 @@ class MainMenu
        if(mousePressed)
        {
           main=false;
-          play=true;
-          gameui.lives=3;
+          lvlsel=true;
           //move onto game
         }
      }

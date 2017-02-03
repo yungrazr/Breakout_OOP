@@ -19,13 +19,16 @@ GameOver game;
 GameUI gameui;
 Brick brick;
 FileRead fileread;
+LevelSelect levelselect;
 PFont title;
 PFont content;
+PImage preview[] = new PImage[5];
 boolean main=true;
 boolean control=false;
 boolean play=false;
 boolean release=false;
 boolean gameover=false;
+boolean lvlsel=false;
 int cooldown=20;
 List<Brick> bricks = new ArrayList<Brick>();
 List<boolean[][]> levels = new ArrayList<boolean[][]>();
@@ -39,6 +42,7 @@ void setup()
   frameRate(60);
   rectMode(CENTER);
   ellipseMode(CENTER);
+  imageMode(CENTER);
   textAlign(CENTER,CENTER);
   player = new Player();
   menu = new MainMenu();
@@ -46,21 +50,13 @@ void setup()
   controls = new Controls();
   ball = new Ball();
   game = new GameOver();
+  levelselect = new LevelSelect();
   fileread = new FileRead();
-  fileread.readFile("lvl1.txt");
   //bricks.add(new Brick(new PVector(width/2, height/2)));
-  for (int x = 0; x < 16; x++) 
-  {
-    for (int y = 0; y < 12; y++) 
-    {
-      if(planeArray[x][y])
-      {
-        bricks.add(new Brick(new PVector(width / 16 * x, (height/2+200) / 12 * y)));
-      }
-    }
-  }
   title = loadFont("Italic-Bricks-120.vlw");
   content = loadFont("Arial-BoldItalicMT-60.vlw");
+  preview[0] = loadImage("prev1.jpg");
+  preview[1] = loadImage("prev2.jpg");
   
 }
 
@@ -70,6 +66,12 @@ void draw()
   if(main) {
     cursor();
     menu.drawMenu();
+  }
+  
+  if(lvlsel)
+  {
+    cursor();
+    levelselect.drawLevelSelect();
   }
   
   if(gameover)

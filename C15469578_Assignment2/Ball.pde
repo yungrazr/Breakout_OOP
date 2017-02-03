@@ -68,8 +68,8 @@ class Ball
       if(!release)
       {
         release=true;
-        velocity.y = -5;
-        velocity.x = random(-10, 10);
+        velocity.y = -7.5;
+        velocity.x = random(-7.5 , 7.5);
       }
     }
   }

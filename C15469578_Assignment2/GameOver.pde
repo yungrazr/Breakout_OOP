@@ -21,6 +21,7 @@ class GameOver
         {
           gameover=false;
           main=true;
+          gameui.lives=3;
           //brings you back to main menu
         }
      }
