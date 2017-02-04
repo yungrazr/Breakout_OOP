@@ -19,14 +19,20 @@ class Ball
     if(position.x-radius/2<0)
     {
       velocity.x=random(1, 5);
+      hit.rewind();
+      hit.play();
     }
     if(position.x+radius/2>width)
     {
       velocity.x=random(-5, -1);
+      hit.rewind();
+      hit.play();
     }
     if(position.y-radius/2<0)
     {
       velocity.y*=-1;
+      hit.rewind();
+      hit.play();
     }
     
     //check to see if ball fell under

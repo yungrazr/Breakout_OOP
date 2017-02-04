@@ -16,6 +16,7 @@ Brick brick;
 FileRead fileread;
 LevelSelect levelselect;
 Minim minim;
+AudioPlayer powerup,hit;
 PFont title;
 PFont content;
 PImage preview[] = new PImage[5];
@@ -57,7 +58,8 @@ void setup()
   preview[2] = loadImage("prev3.jpg");
   preview[3] = loadImage("prev4.jpg");
   preview[4] = loadImage("prev5.jpg");
-  
+  hit = minim.loadFile("hit.wav");
+  powerup = minim.loadFile("powerup.wav");
 }
 
 void draw()
