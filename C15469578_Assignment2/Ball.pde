@@ -8,7 +8,6 @@ class Ball
   void drawBall()
   {
     fill(150);
-    //ellipse(x,y,radius,radius);
     ellipse(position.x, position.y, radius, radius);
   }
   

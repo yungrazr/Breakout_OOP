@@ -5,11 +5,6 @@
 
 import java.util.*;
 import ddf.minim.*;
-import ddf.minim.analysis.*;
-import ddf.minim.effects.*;
-import ddf.minim.signals.*;
-import ddf.minim.spi.*;
-import ddf.minim.ugens.*;
 
 Player player;
 MainMenu menu;
@@ -20,9 +15,11 @@ GameUI gameui;
 Brick brick;
 FileRead fileread;
 LevelSelect levelselect;
+Minim minim;
 PFont title;
 PFont content;
 PImage preview[] = new PImage[5];
+
 boolean main=true;
 boolean control=false;
 boolean play=false;
@@ -52,11 +49,14 @@ void setup()
   game = new GameOver();
   levelselect = new LevelSelect();
   fileread = new FileRead();
-  //bricks.add(new Brick(new PVector(width/2, height/2)));
+  minim = new Minim(this);
   title = loadFont("Italic-Bricks-120.vlw");
   content = loadFont("Arial-BoldItalicMT-60.vlw");
   preview[0] = loadImage("prev1.jpg");
   preview[1] = loadImage("prev2.jpg");
+  preview[2] = loadImage("prev3.jpg");
+  preview[3] = loadImage("prev4.jpg");
+  preview[4] = loadImage("prev5.jpg");
   
 }
 
