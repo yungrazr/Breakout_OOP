@@ -49,6 +49,7 @@ class Brick
           ball.velocity.y*=-1;
           brickLife=-1;
           gameui.score+=10;
+          hit3.trigger();
       }
     }
   }
