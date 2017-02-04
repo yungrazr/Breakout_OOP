@@ -1,7 +1,6 @@
 class GameUI
 {
   int lives = 3;
-  int powerup = 0;
   int score = 0;
   
   void drawUI()
