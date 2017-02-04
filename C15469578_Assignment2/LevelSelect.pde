@@ -49,7 +49,7 @@ class LevelSelect
      {
        textFont(content,30);
        fill(255);
-       text("Level 3 text",width/2,(height/2+200));
+       text("Smile! =]",width/2,(height/2+200));
        image(preview[2], width/2,height/2-100, 720, 410);
        if(mousePressed)
        {
@@ -63,7 +63,7 @@ class LevelSelect
      {
        textFont(content,30);
        fill(255);
-       text("Level 4 text",width/2,(height/2+200));
+       text("Time is money?",width/2,(height/2+200));
        image(preview[3], width/2,height/2-100, 720, 410);
        if(mousePressed)
        {
@@ -77,7 +77,7 @@ class LevelSelect
      {
        textFont(content,30);
        fill(255);
-       text("Level 5 text",width/2,(height/2+200));
+       text("'He's the hero Gotham deserves, but not the one it needs..'",width/2,(height/2+200));
        image(preview[4], width/2,height/2-100, 720, 410);
        if(mousePressed)
        {
