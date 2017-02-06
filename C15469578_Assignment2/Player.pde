@@ -5,7 +5,6 @@ class Player
   float playerH = 25;
   float playerSpeed = 10;
   float curve = 7;
-  float powerup=0;
   color c=color(250,28,28);
   
   
@@ -20,6 +19,54 @@ class Player
   void updatePlayer()
   {
     position.x=mouseX;
+    
+    if(gameui.pType==1)
+    {
+      playerW=275;
+    }
+    if(gameui.pType==2)
+    {
+      playerW=100;
+    }
+    if(gameui.pType==3)
+    {
+      
+      if(ball.velocity.y<0)
+      {
+        ball.velocity.y=-8;
+      }
+      if(ball.velocity.y>0)
+      {
+        ball.velocity.y=8;
+      }
+      
+
+    }
+    if(gameui.pType==4)
+    {
+      
+      if(ball.velocity.y<0)
+      {
+        ball.velocity.y=-3.5;
+      }
+      if(ball.velocity.y>0)
+      {
+        ball.velocity.y=3.5;
+      }
+
+    }
+    if(gameui.pType==5)
+    {
+      gameui.lives+=1;
+      gameui.pType=0;
+
+    }
+    /*
+    if(gameui.pType!=1 && gameui.pType!=2)
+    {
+      playerW=200;
+    }
+    */
   }
 
-}//end class Player
+}

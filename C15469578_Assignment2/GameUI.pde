@@ -2,6 +2,7 @@ class GameUI
 {
   int lives = 3;
   int score = 0;
+  int pType = 0;
   
   void drawUI()
   {

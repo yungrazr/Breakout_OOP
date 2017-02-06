@@ -87,14 +87,11 @@ class PowerUp
         position.y=0;
         position.x=random(200,width-200);
         lastPowerUp+=15000;
+        gameui.pType=pType;
         pType=(int)random(1,6);
-        player.powerup=pType;
         special.trigger();
       }
     }
-   
-      
-    
   }
   
 }
