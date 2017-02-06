@@ -36,7 +36,7 @@ boolean planeArray[][] = new boolean[16][12];
 
 void setup()
 {
-  fullScreen();
+  fullScreen(P2D);
   frameRate(60);
   rectMode(CENTER);
   ellipseMode(CENTER);
@@ -94,6 +94,7 @@ void draw()
     cursor();
     controls.drawControls();
   }
+  println("FPS:" + frameRate);
   
   
 }

@@ -86,6 +86,16 @@ class LevelSelect
           play=true;
        }
      }
+     
+     drawButton(100,100,140,70,2,"BACK",255);
+     if(mouseX>100-bWidth/2 && mouseX<100+bWidth/2 && mouseY>100-bHeight/2 && mouseY<100+bHeight/2)
+     {
+       if(mousePressed)
+       {
+          lvlsel=false;
+          main=true;
+       }
+     }
  
   }
 
