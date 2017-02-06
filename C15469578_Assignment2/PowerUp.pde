@@ -1,16 +1,16 @@
 class PowerUp
 {
-  PVector position = new PVector(random(200,width-200), -25);
+  PVector position = new PVector(random(200,width-200),0);
   PVector velocity = new PVector(0,3);
   float pWidth=100;
   float pHeight=45;
   boolean powerup=false;
-  int pType=(int)random(1,5);
-  float lastPowerUp=20000;
+  int pType=(int)random(1,6);
+  float lastPowerUp=15000;
   
   void drawPowerUp()
   {
-    if(lastPowerUp<(delta-startTime-resetTime))
+    if(lastPowerUp<delta)
     {
       powerup=true;
     }
@@ -48,7 +48,7 @@ class PowerUp
       fill(100);
       rect(position.x,position.y,pWidth,pHeight,20);
       textFont(content,30);
-      fill(0);
+      fill(250);
       text("SLOW",position.x,position.y);
     }
     if(powerup && pType==5)
@@ -57,7 +57,7 @@ class PowerUp
       fill(100);
       rect(position.x,position.y,pWidth,pHeight,20);
       textFont(content,30);
-      fill(255,10,10);
+      fill(10,255,10);
       text("1UP",position.x,position.y);
     }
     
@@ -73,9 +73,24 @@ class PowerUp
     if(position.y>height)
     {
       powerup=false;
-      position.y=-25;
+      position.y=0;
       position.x=random(200,width-200);
-      lastPowerUp+=20000;
+      lastPowerUp+=15000;
+      pType=(int)random(1,6);
+    }
+    
+    if(position.x>player.position.x-player.playerW && position.x<player.position.x+player.playerW)
+    {
+      if(position.y+pHeight>player.position.y)
+      {
+        powerup=false;
+        position.y=0;
+        position.x=random(200,width-200);
+        lastPowerUp+=15000;
+        pType=(int)random(1,6);
+        player.powerup=pType;
+        special.trigger();
+      }
     }
    
       

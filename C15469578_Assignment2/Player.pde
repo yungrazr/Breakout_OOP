@@ -5,7 +5,9 @@ class Player
   float playerH = 25;
   float playerSpeed = 10;
   float curve = 7;
+  float powerup=0;
   color c=color(250,28,28);
+  
   
   void drawPlayer()
   {

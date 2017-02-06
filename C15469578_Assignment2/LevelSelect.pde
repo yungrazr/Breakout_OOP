@@ -88,6 +88,7 @@ class LevelSelect
           fileread.readFile("lvl5.txt");
           lvlsel=false;
           play=true;
+          startTime=millis()-resetTime;
        }
      }
      
