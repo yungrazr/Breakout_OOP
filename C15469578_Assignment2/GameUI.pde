@@ -5,6 +5,7 @@ class GameUI
   
   void drawUI()
   {
+    delta=millis()-startTime-resetTime;
     player.updatePlayer();
     player.drawPlayer();
     ball.updateBall();
@@ -14,10 +15,15 @@ class GameUI
      b.updateBrick();
      b.drawBrick();
     }
+    powerup.drawPowerUp();
+    powerup.updatePowerUp();
     textFont(content,30);
     fill(255);
-    text("Lives: " + lives,100,30);
-    text("Score: " + score,250,30);
+    textAlign(LEFT,CENTER);
+    text("Lives: " + lives,20,30);
+    text("Score: " + score,150,30);
+    text("Time: " + round(delta/1000),325,30);
+    textAlign(CENTER,CENTER);
     
     if(keyPressed)
     {
@@ -26,6 +32,7 @@ class GameUI
         cooldown=20;
         main=true;
         play=false;
+        resetTime=millis();
       }
       
     }

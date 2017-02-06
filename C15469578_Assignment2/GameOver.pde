@@ -23,6 +23,7 @@ class GameOver
           main=true;
           gameui.lives=3;
           cooldown=20;
+          resetTime=millis();
           //brings you back to main menu
         }
      }

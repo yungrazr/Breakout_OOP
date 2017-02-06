@@ -28,6 +28,7 @@ class LevelSelect
           fileread.readFile("lvl1.txt");
           lvlsel=false;
           play=true;
+          startTime=millis()-resetTime;
         }
      }
      drawButton(bWPos2,bHPos,bWidth,bHeight,2,"LEVEL 2",255);
@@ -42,6 +43,7 @@ class LevelSelect
           fileread.readFile("lvl2.txt");
           lvlsel=false;
           play=true;
+          startTime=millis()-resetTime;
        }
      }
      drawButton(bWPos3,bHPos,bWidth,bHeight,2,"LEVEL 3",255);
@@ -56,6 +58,7 @@ class LevelSelect
           fileread.readFile("lvl3.txt");
           lvlsel=false;
           play=true;
+          startTime=millis()-resetTime;
        }
      }
      drawButton(bWPos4,bHPos,bWidth,bHeight,2,"LEVEL 4",255);
@@ -70,6 +73,7 @@ class LevelSelect
           fileread.readFile("lvl4.txt");
           lvlsel=false;
           play=true;
+          startTime=millis()-resetTime;
        }
      }
      drawButton(bWPos5,bHPos,bWidth,bHeight,2,"LEVEL 5",255);
