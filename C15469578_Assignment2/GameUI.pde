@@ -36,6 +36,10 @@ class GameUI
         resetTime=millis();
         fileread.clearLevel();
         release=false;
+        powerup.powerup=false;
+        powerup.position.y=0;
+        powerup.position.x=random(200,width-200);
+        powerup.lastPowerUp=15000;
       }
       
     }
