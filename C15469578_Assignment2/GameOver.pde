@@ -23,6 +23,8 @@ class GameOver
           main = true;
           gameui.lives = 3;
           gameui.score = 0;
+          gameui.pType = 0;
+          powerup.powerup=false;
           cooldown = 20;
           fileread.clearLevel();
           release = false;

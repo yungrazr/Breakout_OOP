@@ -9,13 +9,13 @@ class GameUI
     delta=millis()-startTime-resetTime;
     player.updatePlayer();
     player.drawPlayer();
-    ball.updateBall();
-    ball.drawBall();
     for (Brick b : bricks) 
     {
      b.updateBrick();
      b.drawBrick();
     }
+    ball.updateBall();
+    ball.drawBall();
     powerup.drawPowerUp();
     powerup.updatePowerUp();
     textFont(content,30);

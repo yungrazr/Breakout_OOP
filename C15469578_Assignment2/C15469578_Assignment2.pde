@@ -17,6 +17,7 @@ FileRead fileread;
 LevelSelect levelselect;
 Minim minim;
 AudioSample special,hit,hit2,hit3;
+AudioPlayer theme;
 PowerUp powerup;
 PFont title;
 PFont content;
@@ -67,6 +68,10 @@ void setup()
   hit2 = minim.loadSample("hit2.wav", 512);
   hit3 = minim.loadSample("hit2.wav", 512);
   special = minim.loadSample("powerup.wav", 512);
+  theme = minim.loadFile("theme.wav", 512);
+  theme.setGain(-16);
+  hit3.setGain(-24);
+  theme.loop();
 }
 
 void draw()

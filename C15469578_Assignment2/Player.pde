@@ -2,7 +2,7 @@ class Player
 {
   PVector position = new PVector(width/2, height-100);
   float playerW = 200;
-  float playerH = 25;
+  float playerH = 30;
   float playerSpeed = 10;
   float curve = 7;
   color c=color(250,28,28);

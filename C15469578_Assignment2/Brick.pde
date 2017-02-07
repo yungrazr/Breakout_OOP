@@ -17,6 +17,7 @@ class Brick
     if(brickLife>0)
     {
       fill(c);
+      noStroke();
       rectMode(CORNER);
       rect(position.x,position.y,brickWidth,brickHeight);
       stroke(0);
@@ -33,11 +34,11 @@ class Brick
       if(ball.position.x+(ball.radius/2) > position.x && ball.position.x-(ball.radius/2) < position.x+brickWidth &&
       ball.position.y+(ball.radius/2) > position.y && ball.position.y-(ball.radius/2) < position.y+brickHeight)
       {
-          if(ball.position.x <= position.x)
+          if(ball.position.x <= position.x+10)
           {
             ball.velocity.x*=-1;
           }
-          if(ball.position.x >= position.x+brickWidth)
+          if(ball.position.x >= position.x+brickWidth-10)
           {
             ball.velocity.x*=-1;
           }
