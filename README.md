@@ -1,7 +1,7 @@
 #Breakout Game
 
-YouTube video:
-[![Youtube Link](http://img.youtube.com/vi/LJvx2JdNwrQ/0.jpg)](http://www.youtube.com/watch?v=LJvx2JdNwrQ)
+YouTube video demonstration: [Click Here](https://www.youtube.com/watch?v=LJvx2JdNwrQ "YouTube Video")
+
 This is my second assignment project for OOP Year2, made in Processing.
 It is a simple breakout game with five different levels and five various powerups.
 
