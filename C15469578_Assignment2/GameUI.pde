@@ -26,10 +26,12 @@ class GameUI
     text("Time: " + round(delta/1000),325,30);
     textAlign(CENTER,CENTER);
     
+    //Key to press to go back to menu if youre in game
     if(keyPressed)
     {
       if(key=='o' || key=='O')
       {
+        //resetting variables
         cooldown=20;
         main=true;
         play=false;

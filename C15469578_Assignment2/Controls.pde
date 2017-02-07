@@ -11,9 +11,10 @@ class Controls
      background(0);
      textFont(content,30);
      fill(255);
-     text("Move mouse left & right to move the paddle",width/2,height/3);
-     text("Hit the bricks with the ball to complete the level",width/2,height/3+100);
-     text("Collect powerups for different abilities/bonuses",width/2,height/3+200);
+     text("Move mouse left & right to move the paddle",width/2,height/3-100);
+     text("Hit the bricks with the ball to complete the level",width/2,height/3);
+     text("Collect powerups for different abilities/bonuses",width/2,height/3+100);
+     text("Press 'O' in-game to go back to menu screen",width/2,height/3+200);
      
      drawButton(bWPos,bHPos,bWidth,bHeight,2,"BACK",255);
      if(mousePressed)
@@ -26,6 +27,7 @@ class Controls
         }
      }
      
+     //code to draw powerups and text
      noStroke();
      fill(100);
      rect(width/8,height/8,200,90,20);

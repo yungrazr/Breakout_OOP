@@ -4,6 +4,8 @@ class FileRead
   String str[];
   char character[];
   
+  //method to read level in from text file
+  //# means an empty space and @ means place a brick there 
   void readFile(String filename)
   {
     boolean level[][] = new boolean[16][12];
@@ -33,6 +35,7 @@ class FileRead
     }
   }
   
+  //method to clear the bricks when switching between levels
   void clearLevel()
   {
     for (Brick brick: bricks)

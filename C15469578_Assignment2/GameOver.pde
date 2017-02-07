@@ -15,12 +15,13 @@ class GameOver
       textFont(content,30);
       text("Try again?" ,width/2,height/2+200);
       
-      
+     //menu button 
      drawButton(bWPos,bHPos,bWidth,bHeight,2,"MENU",255);
      if(mousePressed)
      {
         if(mouseX>bWPos-bWidth/2 && mouseX<bWPos+bWidth/2 && mouseY>bHPos-bHeight/2 && mouseY<bHPos+bHeight/2)
         {
+          //resetting variables
           gameover = false;
           main = true;
           gameui.lives = 3;
@@ -31,7 +32,6 @@ class GameOver
           fileread.clearLevel();
           release = false;
           resetTime = millis();
-          //brings you back to main menu
         }
      }
   }

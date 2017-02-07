@@ -31,6 +31,7 @@ class Brick
   {
     if(brickLife>0)
     {
+      //check to detect ball collision
       if(ball.position.x+(ball.radius/2) > position.x && ball.position.x-(ball.radius/2) < position.x+brickWidth &&
       ball.position.y+(ball.radius/2) > position.y && ball.position.y-(ball.radius/2) < position.y+brickHeight)
       {

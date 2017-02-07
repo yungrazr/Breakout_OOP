@@ -10,6 +10,7 @@ class PowerUp
   
   void drawPowerUp()
   {
+    //to make sure powerup is only dropped a certain time after previous one
     if(lastPowerUp<delta)
     {
       powerup=true;
@@ -70,6 +71,7 @@ class PowerUp
       position.y+=velocity.y;
     }
     
+    //check to see if powerup hit bottom of level
     if(position.y>height)
     {
       powerup=false;
@@ -79,6 +81,7 @@ class PowerUp
       pType=(int)random(1,6);
     }
     
+    //check to see if powerup collided with player
     if(position.x>player.position.x-player.playerW && position.x<player.position.x+player.playerW)
     {
       if(position.y+pHeight>player.position.y)

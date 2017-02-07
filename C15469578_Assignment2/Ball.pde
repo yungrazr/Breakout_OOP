@@ -68,6 +68,7 @@ class Ball
       }
     }
     
+    
     if(!release)
     {
       position.x=mouseX;

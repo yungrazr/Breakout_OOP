@@ -20,15 +20,16 @@ class Player
   {
     position.x=mouseX;
     
-    if(gameui.pType==1)
+    //if statements to sort out powerups
+    if(gameui.pType==1)//size+
     {
       playerW=275;
     }
-    if(gameui.pType==2)
+    if(gameui.pType==2)//size-
     {
       playerW=100;
     }
-    if(gameui.pType==3)
+    if(gameui.pType==3)//speed
     {
       
       if(ball.velocity.y<0)
@@ -42,7 +43,7 @@ class Player
       
 
     }
-    if(gameui.pType==4)
+    if(gameui.pType==4)//slow
     {
       
       if(ball.velocity.y<0)
@@ -55,18 +56,12 @@ class Player
       }
 
     }
-    if(gameui.pType==5)
+    if(gameui.pType==5)//1up
     {
       gameui.lives+=1;
       gameui.pType=0;
 
     }
-    /*
-    if(gameui.pType!=1 && gameui.pType!=2)
-    {
-      playerW=200;
-    }
-    */
   }
 
 }
