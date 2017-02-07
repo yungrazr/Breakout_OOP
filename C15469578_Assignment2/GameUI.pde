@@ -28,7 +28,7 @@ class GameUI
     
     if(keyPressed)
     {
-      if(key=='o')
+      if(key=='o' || key=='O')
       {
         cooldown=20;
         main=true;
