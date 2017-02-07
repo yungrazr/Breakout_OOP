@@ -25,6 +25,57 @@ class Controls
           //brings you back to main menu
         }
      }
+     
+     noStroke();
+     fill(100);
+     rect(width/8,height/8,200,90,20);
+     textFont(content,60);
+     fill(13,252,10);
+     text("SIZE+",width/8,height/8);
+     textFont(content,30);
+     fill(255);
+     text("Increases width of the paddle",width/8,height/8+100);
+     
+     noStroke();
+     fill(100);
+     rect(width/8,height/2-75,200,90,20);
+     textFont(content,60);
+     fill(255,10,10);
+     text("SIZE-",width/8,height/2-75);
+     textFont(content,30);
+     fill(255);
+     text("Decreases width of paddle",width/8,height/2+25);
+     text("(Best to avoid this)",width/8,height/2+75);
+     
+     noStroke();
+     fill(100);
+     rect(width/8,height/2+250,200,90,20);
+     textFont(content,60);
+     fill(10,255,10);
+     text("1UP",width/8,height/2+250);
+     textFont(content,30);
+     fill(255);
+     text("Gives you an extra life",width/8,height/2+350);
+     
+     noStroke();
+     fill(100);
+     rect(width-width/8,height/8,200,90,20);
+     textFont(content,60);
+     fill(250);
+     text("SLOW",width-width/8,height/8);
+     textFont(content,30);
+     fill(255);
+     text("Decreases the speed of the ball",width-width/8,height/8+100);
+     
+     noStroke();
+     fill(100);
+     rect(width-width/8,height/2-75,200,90,20);
+     textFont(content,60);
+     fill(3,255,240);
+     text("SPEED",width-width/8,height/2-75);
+     textFont(content,30);
+     fill(255);
+     text("Increases speed of ball",width-width/8,height/2+25);
   }
   
   

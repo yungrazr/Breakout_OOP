@@ -40,6 +40,7 @@ boolean planeArray[][] = new boolean[16][12];
 void setup()
 {
   fullScreen(P2D);
+  //size(1920,1080,P2D);
   frameRate(60);
   rectMode(CENTER);
   ellipseMode(CENTER);

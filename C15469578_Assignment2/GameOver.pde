@@ -23,6 +23,8 @@ class GameOver
           main=true;
           gameui.lives=3;
           cooldown=20;
+          fileread.clearLevel();
+          release=false;
           resetTime=millis();
           //brings you back to main menu
         }

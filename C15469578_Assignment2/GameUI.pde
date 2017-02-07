@@ -34,6 +34,8 @@ class GameUI
         main=true;
         play=false;
         resetTime=millis();
+        //fileread.clearLevel();
+        release=false;
       }
       
     }

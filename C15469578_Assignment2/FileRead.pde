@@ -33,9 +33,12 @@ class FileRead
     }
   }
   
-  
-  
-  
-  
+  void clearLevel()
+  {
+    for (Brick brick: bricks)
+    {
+      brick.brickLife=0;
+    }
+  }
   
 }
