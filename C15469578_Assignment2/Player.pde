@@ -33,11 +33,11 @@ class Player
       
       if(ball.velocity.y<0)
       {
-        ball.velocity.y=-8;
+        ball.velocity.y=-9;
       }
       if(ball.velocity.y>0)
       {
-        ball.velocity.y=8;
+        ball.velocity.y=9;
       }
       
 
@@ -47,11 +47,11 @@ class Player
       
       if(ball.velocity.y<0)
       {
-        ball.velocity.y=-3.5;
+        ball.velocity.y=-3;
       }
       if(ball.velocity.y>0)
       {
-        ball.velocity.y=3.5;
+        ball.velocity.y=3;
       }
 
     }

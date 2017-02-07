@@ -2,7 +2,7 @@ class Ball
 {
   PVector position = new PVector(mouseX, height - 120);
   PVector velocity = new PVector(0, 0);
-  float speed;
+  float[] speeds = {-6,-3.5,-2.5,2.5,3.5,6};
   float radius = 25;
   
   void drawBall()
@@ -72,7 +72,7 @@ class Ball
       {
         release=true;
         velocity.y = -6;
-        velocity.x = random(-6 , 6);
+        velocity.x = speeds[(int)random(0,5)];
       }
     }
   }

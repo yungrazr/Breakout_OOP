@@ -65,7 +65,8 @@ class Controls
      text("SLOW",width-width/8,height/8);
      textFont(content,30);
      fill(255);
-     text("Decreases the speed of the ball",width-width/8,height/8+100);
+     text("Decreases speed of the ball",width-width/8,height/8+100);
+     text("by (50%)",width-width/8,height/8+150);
      
      noStroke();
      fill(100);
@@ -75,7 +76,8 @@ class Controls
      text("SPEED",width-width/8,height/2-75);
      textFont(content,30);
      fill(255);
-     text("Increases speed of ball",width-width/8,height/2+25);
+     text("Increases speed of the ball",width-width/8,height/2+25);
+     text("by (50%)",width-width/8,height/2+75);
   }
   
   

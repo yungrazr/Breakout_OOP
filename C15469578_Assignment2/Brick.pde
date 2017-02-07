@@ -33,20 +33,22 @@ class Brick
       if(ball.position.x+(ball.radius/2) > position.x && ball.position.x-(ball.radius/2) < position.x+brickWidth &&
       ball.position.y+(ball.radius/2) > position.y && ball.position.y-(ball.radius/2) < position.y+brickHeight)
       {
-        /*
-          if((ball.position.y+(ball.radius/2) > position.y || ball.position.y-(ball.radius/2) < position.y+brickHeight) 
-          && ball.position.x+(ball.radius/2) > position.x && ball.position.x-(ball.radius/2) < position.x+brickWidth)
+          if(ball.position.x <= position.x)
           {
             ball.velocity.x*=-1;
           }
-          
-          if((ball.position.x+(ball.radius/2) > position.x || ball.position.x-(ball.radius/2) < position.x+brickWidth) 
-          && ball.position.y+(ball.radius/2) > position.y && ball.position.y-(ball.radius/2) < position.y+brickHeight)
+          if(ball.position.x >= position.x+brickWidth)
           {
             ball.velocity.x*=-1;
           }
-          */
-          ball.velocity.y*=-1;
+          if(ball.position.y <= position.y)
+          {
+            ball.velocity.y*=-1;
+          }
+          if(ball.position.y >= position.y+brickHeight)
+          {
+            ball.velocity.y*=-1;
+          }
           brickLife=-1;
           gameui.score+=10;
           hit3.trigger();

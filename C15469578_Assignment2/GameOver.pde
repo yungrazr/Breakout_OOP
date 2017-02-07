@@ -1,9 +1,9 @@
 class GameOver
 {
-  float bWidth=300;
-  float bHeight=100;
-  float bWPos=width/2;
-  float bHPos=(height/2+300);
+  float bWidth = 300;
+  float bHeight = 100;
+  float bWPos = width/2;
+  float bHPos = (height/2+300);
   
   void drawGameOver()
   {
@@ -19,13 +19,14 @@ class GameOver
      {
         if(mouseX>bWPos-bWidth/2 && mouseX<bWPos+bWidth/2 && mouseY>bHPos-bHeight/2 && mouseY<bHPos+bHeight/2)
         {
-          gameover=false;
-          main=true;
-          gameui.lives=3;
-          cooldown=20;
+          gameover = false;
+          main = true;
+          gameui.lives = 3;
+          gameui.score = 0;
+          cooldown = 20;
           fileread.clearLevel();
-          release=false;
-          resetTime=millis();
+          release = false;
+          resetTime = millis();
           //brings you back to main menu
         }
      }
