@@ -12,6 +12,8 @@ class GameOver
       text("Game over!",width/2,height/4);
       textFont(content,60);
       text("Your final score: " + gameui.score,width/2,height/2);
+      textFont(content,30);
+      text("Try again?" ,width/2,height/2+200);
       
       
      drawButton(bWPos,bHPos,bWidth,bHeight,2,"MENU",255);
