@@ -6,6 +6,20 @@ It is a simple breakout game with five different levels and five various powerup
 It consists of a main menu, controls menu (which explains how to play and what each of the powerups do), level select, play screen & game over screen.
 
 The levels are read in from text files in the /data folder, where # is an empty space and the @ symbol is a brick. 
-It is therefore somewhat easy to create new levels or modifying existing ones by just changing some symbols in the text file.
+It is therefore somewhat easy to create new levels or modify existing ones by just changing the positions of symbols in the text file.
 
 There are 5 powerups, 'Size+' which increases paddle size, 'Size-' which decreases paddle size (best to avoid), 'Slow' which slows down the ball, 'Speed' which speeds up the ball, & '1UP' which gives you and extra life.
+
+Your score and time are tracked in each level, with +10 score for every brick broken. Time is used for powerups, which drop every 15 seconds.
+
+
+Screenshots
+======
+
+![alt text](https://github.com/yungrazr/OOP_Assignment2/blob/master/Screenshots/1.jpg "Main Menu")
+
+![alt text](https://github.com/yungrazr/OOP_Assignment2/blob/master/Screenshots/2.jpg "Controls Screen")
+
+![alt text](https://github.com/yungrazr/OOP_Assignment2/blob/master/Screenshots/3.jpg "Level Select")
+
+![alt text](https://github.com/yungrazr/OOP_Assignment2/blob/master/Screenshots/4.jpg "Game Screen")
