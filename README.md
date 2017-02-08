@@ -16,6 +16,8 @@ Your score and time are tracked in each level, with +10 score for every brick br
 
 Minim sound library is used to play sound effects on ball & block collision, and also to play the background music.
 
+Make sure Minim lib is installed and run in fullscreen/1920x1080 for best experience.
+
 Screenshots
 ======
 
