@@ -7,13 +7,14 @@ It is a simple breakout game with five different levels and five various powerup
 
 It consists of a main menu, controls menu (which explains how to play and what each of the powerups do), level select, play screen & game over screen.
 
-The levels are read in from text files in the /data folder, where # is an empty space and the @ symbol is a brick. 
+The levels are read in from text files in the /data folder, using rows and columns of symbols, where # is an empty space and the @ symbol is a brick. 
 It is therefore somewhat easy to create new levels or modify existing ones by just changing the positions of symbols in the text file.
 
 There are 5 powerups, 'Size+' which increases paddle size, 'Size-' which decreases paddle size (best to avoid), 'Slow' which slows down the ball, 'Speed' which speeds up the ball, & '1UP' which gives you and extra life.
 
 Your score and time are tracked in each level, with +10 score for every brick broken. Time is used for powerups, which drop every 15 seconds.
 
+Minim sound library is used to play sound effects on ball & block collision, and also to play the background music.
 
 Screenshots
 ======
